@@ -104,7 +104,7 @@ GameManager.prototype.gameloop = function(){
 
 
 GameManager.prototype.updatePositions = function(){
-	if(this.ticks%4 == 0){
+	if(this.ticks%3 == 0){
 		for(var i = this.gameObjects.length-1; i >= 0; i--){
 	
 			this.gameObjects[i].updatePosition();
