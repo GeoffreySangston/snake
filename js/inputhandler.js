@@ -25,7 +25,7 @@ InputHandler.prototype.listen = function(){
 	
 	
 	document.addEventListener('keydown',function(e){
-		var modifiers = event.altKey || event.ctrlKey || event.metaKey || event.shiftKey;
+		var modifiers = e.altKey || e.ctrlKey || e.metaKey || e.shiftKey;
 		var mapped = map[e.which];
 		
 		if(!modifiers){
