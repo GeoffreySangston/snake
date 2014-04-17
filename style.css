@@ -1,0 +1,13 @@
+#canvas{
+	border:1px black solid;	
+}	
+#page{
+	display:table;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	
+}
+#page-container{
+	width:100%;
+}
