@@ -11,3 +11,14 @@
 #page-container{
 	width:100%;
 }
+
+#page-title{
+	display:inline-block;
+}
+#page-score{
+	display:inline-block;
+	float:right;
+	
+	height:50px;
+	line-height:50px;
+}

@@ -75,6 +75,7 @@ GameManager.prototype.setup = function(){
 
 	this.lose = false;
 	this.score = 0;
+	this.htmlHandler.updateScore(this.score);
 	
 	this.SNAKEHEADINDEX = 0;
 	this.SNAKETAILINDEX = 0;
@@ -104,7 +105,7 @@ GameManager.prototype.gameloop = function(){
 
 
 GameManager.prototype.updatePositions = function(){
-	if(this.ticks%4 == 0){
+	if(this.ticks%3 == 0){
 		for(var i = this.gameObjects.length-1; i >= 0; i--){
 	
 			this.gameObjects[i].updatePosition();
@@ -128,6 +129,7 @@ GameManager.prototype.actCollisions = function(){
 		if(this.collisions[i].type == 'apple'){
 			this.gameObjects[this.collisions[i].objectIndex].x = -5000;
 			this.score++;
+			this.htmlHandler.updateScore(this.score);
 			
 			this.gameObjects.splice(this.collisions[i].objectIndex,1);
 			this.addNewApple();
